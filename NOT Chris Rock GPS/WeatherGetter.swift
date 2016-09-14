@@ -36,7 +36,6 @@ class WeatherGetter {
     
     private func getWeather(weatherRequestURL: NSURL) {
         
-        // This is a pretty simple networking task, so the shared session will do.
         let session = NSURLSession.sharedSession()
         session.configuration.timeoutIntervalForRequest = 3
         
@@ -44,22 +43,17 @@ class WeatherGetter {
         let dataTask = session.dataTaskWithURL(weatherRequestURL) {
             (data: NSData?, response: NSURLResponse?, error: NSError?) in
             if let networkError = error {
-                // Case 1: Error
+
                 // An error occurred while trying to get data from the server.
                 self.delegate.didNotGetWeather(networkError)
             }
             else {
-                // Case 2: Success
-                // We got data from the server!
                 do {
                     // Try to convert that data into a Swift dictionary
                     let weatherData = try NSJSONSerialization.JSONObjectWithData(
                         data!,
                         options: .MutableContainers) as! [String: AnyObject]
                     
-                    // If we made it to this point, we've successfully converted the
-                    // JSON-formatted weather data into a Swift dictionary.
-                    // Let's now used that dictionary to initialize a Weather struct.
                     let weather = Weather(weatherData: weatherData)
                     
                     // Now that we have the Weather struct, let's notify the view controller,
@@ -72,8 +66,6 @@ class WeatherGetter {
                 }
             }
         }
-        
-        // The data task is set up...launch it!
         dataTask.resume()
     }
     

@@ -27,16 +27,11 @@ class OpenWeatherViewController: UIViewController,
     
     let locationManager = CLLocationManager()
     var weather: WeatherGetter!
-    
-    
-    // MARK: -
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         weather = WeatherGetter(delegate: self)
-        
-        // Initialize UI
-        // -------------
+
         cityLabel.text = "simple weather"
         weatherLabel.text = ""
         temperatureLabel.text = ""
@@ -57,10 +52,6 @@ class OpenWeatherViewController: UIViewController,
         super.didReceiveMemoryWarning()
     }
     
-    
-    // MARK: - Button events and states
-    // --------------------------------
-    
     @IBAction func getWeatherForLocationButtonTapped(sender: UIButton) {
         setWeatherButtonStates(false)
         getLocation()
@@ -79,18 +70,12 @@ class OpenWeatherViewController: UIViewController,
         getCityWeatherButton.enabled = state
     }
     
-    
-    // MARK: - WeatherGetterDelegate methods
-    // -----------------------------------
-    
     func didGetWeather(weather: Weather) {
-        // This method is called asynchronously, which means it won't execute in the main queue.
-        // All UI code needs to execute in the main queue, which is why we're wrapping the code
-        // that updates all the labels in a dispatch_async() call.
+
         dispatch_async(dispatch_get_main_queue()) {
             self.cityLabel.text = weather.city
             self.weatherLabel.text = weather.weatherDescription
-            self.temperatureLabel.text = "\(Int(round(weather.tempCelsius)))°"
+            self.temperatureLabel.text = "\(Int(round(weather.tempFahrenheit)))°"
             self.cloudCoverLabel.text = "\(weather.cloudCover)%"
             self.windLabel.text = "\(weather.windSpeed) m/s"
             
@@ -108,9 +93,7 @@ class OpenWeatherViewController: UIViewController,
     }
     
     func didNotGetWeather(error: NSError) {
-        // This method is called asynchronously, which means it won't execute in the main queue.
-        // All UI code needs to execute in the main queue, which is why we're wrapping the call
-        // to showSimpleAlert(title:message:) in a dispatch_async() call.
+
         dispatch_async(dispatch_get_main_queue()) {
             self.showSimpleAlert(title: "Can't get the weather",
                                  message: "The weather service isn't responding.")
@@ -179,23 +162,14 @@ class OpenWeatherViewController: UIViewController,
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        // This method is called asynchronously, which means it won't execute in the main queue.
-        // All UI code needs to execute in the main queue, which is why we're wrapping the call
-        // to showSimpleAlert(title:message:) in a dispatch_async() call.
+
         dispatch_async(dispatch_get_main_queue()) {
             self.showSimpleAlert(title: "Can't determine your location",
                                  message: "The GPS and other location services aren't responding.")
         }
         print("locationManager didFailWithError: \(error)")
     }
-    
-    
-    // MARK: - UITextFieldDelegate and related methods
-    // -----------------------------------------------
-    
-    // Enable the "Get weather for the city above" button
-    // if the city text field contains any text,
-    // disable it otherwise.
+
     func textField(textField: UITextField,
                    shouldChangeCharactersInRange range: NSRange,
                                                  replacementString string: String) -> Bool {
@@ -206,20 +180,15 @@ class OpenWeatherViewController: UIViewController,
         getCityWeatherButton.enabled = prospectiveText.characters.count > 0
         return true
     }
-    
-    // Pressing the clear button on the text field (the x-in-a-circle button
-    // on the right side of the field)
+
     func textFieldShouldClear(textField: UITextField) -> Bool {
-        // Even though pressing the clear button clears the text field,
-        // this line is necessary. I'll explain in a later blog post.
+
         textField.text = ""
         
         getCityWeatherButton.enabled = false
         return true
     }
-    
-    // Pressing the return button on the keyboard should be like
-    // pressing the "Get weather for the city above" button.
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         getWeatherForCityButtonTapped(getCityWeatherButton)
@@ -230,11 +199,7 @@ class OpenWeatherViewController: UIViewController,
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
     }
-    
-    
-    // MARK: - Utility methods
-    // -----------------------
-    
+
     func showSimpleAlert(title title: String, message: String) {
         let alert = UIAlertController(
             title: title,
@@ -256,16 +221,11 @@ class OpenWeatherViewController: UIViewController,
     
 }
 
-
 extension String {
     
-    // A handy method for %-encoding strings containing spaces and other
-    // characters that need to be converted for use in URLs.
     var urlEncoded: String {
         return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLUserAllowedCharacterSet())!
     }
-    
-    // Trim excess whitespace from the start and end of the string.
     var trimmed: String {
         return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
     }

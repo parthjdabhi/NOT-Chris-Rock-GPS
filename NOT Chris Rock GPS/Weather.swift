@@ -26,12 +26,12 @@ struct Weather {
   // which is why we provide celsius and fahrenheit
   // computed properties.
   private let temp: Double
-  var tempFahrenheit: Double {
+  var tempCelsius: Double {
     get {
       return temp - 273.15
     }
   }
-  var tempCelsius: Double {
+  var tempFahrenheit: Double {
     get {
       return (temp - 273.15) * 1.8 + 32
     }
