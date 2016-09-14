@@ -25,6 +25,7 @@
 		DA6AE8061D88E1AA001E5B65 /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */; };
 		DA6AE8081D89124C001E5B65 /* OpenWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8071D89124C001E5B65 /* OpenWeatherViewController.swift */; };
 		DA6AE80A1D89A8BA001E5B65 /* WeatherGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8091D89A8BA001E5B65 /* WeatherGetter.swift */; };
+		DA6AE80D1D89B169001E5B65 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE80C1D89B169001E5B65 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
 		DA6AE8071D89124C001E5B65 /* OpenWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewController.swift; sourceTree = "<group>"; };
 		DA6AE8091D89A8BA001E5B65 /* WeatherGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherGetter.swift; sourceTree = "<group>"; };
+		DA6AE80C1D89B169001E5B65 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				DA6AE8071D89124C001E5B65 /* OpenWeatherViewController.swift */,
 				DA6AE8091D89A8BA001E5B65 /* WeatherGetter.swift */,
+				DA6AE80C1D89B169001E5B65 /* Weather.swift */,
 			);
 			name = Weather;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */,
 				DA6AE8081D89124C001E5B65 /* OpenWeatherViewController.swift in Sources */,
 				DA6AE7CA1D88C782001E5B65 /* NOT_Chris_Rock_GPS.xcdatamodeld in Sources */,
+				DA6AE80D1D89B169001E5B65 /* Weather.swift in Sources */,
 				DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */,
 				DA6AE7C21D88C782001E5B65 /* AppDelegate.swift in Sources */,
 				DA6AE7F41D88C7B6001E5B65 /* Constants.swift in Sources */,

@@ -8,65 +8,67 @@
 
 import Foundation
 
+protocol WeatherGetterDelegate {
+    func didGetWeather(weather: Weather)
+    func didNotGetWeather(error: NSError)
+}
+
 class WeatherGetter {
     
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "a08c4589e8e874b28372aa244086a49c"
     
-    func getWeather(city: String) {
+    private var delegate: WeatherGetterDelegate
+    
+    init(delegate: WeatherGetterDelegate) {
+        self.delegate = delegate
+    }
+    
+    func getWeatherByCity(city: String) {
+        let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
+        getWeather(weatherRequestURL)
+    }
+    
+    func getWeatherByCoordinates(latitude latitude: Double, longitude: Double) {
+        let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&lat=\(latitude)&lon=\(longitude)")!
+        getWeather(weatherRequestURL)
+    }
+    
+    private func getWeather(weatherRequestURL: NSURL) {
         
         // This is a pretty simple networking task, so the shared session will do.
         let session = NSURLSession.sharedSession()
-        
-        let weatherRequestURL = NSURL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
+        session.configuration.timeoutIntervalForRequest = 3
         
         // The data task retrieves the data.
         let dataTask = session.dataTaskWithURL(weatherRequestURL) {
             (data: NSData?, response: NSURLResponse?, error: NSError?) in
-            if let error = error {
+            if let networkError = error {
                 // Case 1: Error
-                // We got some kind of error while trying to get data from the server.
-                print("Error:\n\(error)")
+                // An error occurred while trying to get data from the server.
+                self.delegate.didNotGetWeather(networkError)
             }
             else {
                 // Case 2: Success
-                // We got a response from the server!
+                // We got data from the server!
                 do {
                     // Try to convert that data into a Swift dictionary
-                    let weather = try NSJSONSerialization.JSONObjectWithData(
+                    let weatherData = try NSJSONSerialization.JSONObjectWithData(
                         data!,
                         options: .MutableContainers) as! [String: AnyObject]
                     
                     // If we made it to this point, we've successfully converted the
                     // JSON-formatted weather data into a Swift dictionary.
-                    // Let's print its contents to the debug console.
-                    print("Date and time: \(weather["dt"]!)")
-                    print("City: \(weather["name"]!)")
+                    // Let's now used that dictionary to initialize a Weather struct.
+                    let weather = Weather(weatherData: weatherData)
                     
-                    print("Longitude: \(weather["coord"]!["lon"]!!)")
-                    print("Latitude: \(weather["coord"]!["lat"]!!)")
-                    
-                    print("Weather ID: \(weather["weather"]![0]!["id"]!!)")
-                    print("Weather main: \(weather["weather"]![0]!["main"]!!)")
-                    print("Weather description: \(weather["weather"]![0]!["description"]!!)")
-                    print("Weather icon ID: \(weather["weather"]![0]!["icon"]!!)")
-                    
-                    print("Temperature: \(weather["main"]!["temp"]!!)")
-                    print("Humidity: \(weather["main"]!["humidity"]!!)")
-                    print("Pressure: \(weather["main"]!["pressure"]!!)")
-                    
-                    print("Cloud cover: \(weather["clouds"]!["all"]!!)")
-                    
-                    print("Wind direction: \(weather["wind"]!["deg"]!!) degrees")
-                    print("Wind speed: \(weather["wind"]!["speed"]!!)")
-                    
-                    print("Country: \(weather["sys"]!["country"]!!)")
-                    print("Sunrise: \(weather["sys"]!["sunrise"]!!)")
-                    print("Sunset: \(weather["sys"]!["sunset"]!!)")
+                    // Now that we have the Weather struct, let's notify the view controller,
+                    // which will use it to display the weather to the user.
+                    self.delegate.didGetWeather(weather)
                 }
                 catch let jsonError as NSError {
                     // An error occurred while trying to convert the data into a Swift dictionary.
-                    print("JSON error description: \(jsonError.description)")
+                    self.delegate.didNotGetWeather(jsonError)
                 }
             }
         }
@@ -76,4 +78,3 @@ class WeatherGetter {
     }
     
 }
-
