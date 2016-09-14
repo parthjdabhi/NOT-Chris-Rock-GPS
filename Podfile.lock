@@ -20,6 +20,11 @@ PODS:
   - GoogleMaps/Base (2.0.1)
   - GoogleMaps/Maps (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
+  - GooglePlacePicker (2.0.1):
+    - GoogleMaps (= 2.0.1)
+    - GooglePlaces (= 2.0.1)
+  - GooglePlaces (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
   - GTMOAuth2 (1.1.2):
     - GTMSessionFetcher (~> 1.1)
   - GTMSessionFetcher (1.1.6):
@@ -48,6 +53,8 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
   - GTMOAuth2 (~> 1.1.0)
   - IQDropDownTextField (~> 1.0)
   - IQKeyboardManagerSwift
@@ -67,6 +74,8 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
   GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  GooglePlacePicker: e7b11b732e40dbe76e8ab4c5fc2f4a7c32b96578
+  GooglePlaces: 72fab1d1651c6df0322f2aad245ffb15b80d3c56
   GTMOAuth2: 1707e2f7fe3a6d7240223c23c473ba5a2d104474
   GTMSessionFetcher: 6aacd0ab48ddf0c3633ab2642d792abfcad1b08a
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
@@ -78,6 +87,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   WebBrowser: d187e245fc8d54a6a754a896039066d95ecebdb5
 
-PODFILE CHECKSUM: 62636256862364d4b29f2fc9be7e9b5adaf774fb
+PODFILE CHECKSUM: bac5b6a8160c522172df13c8a84f93f3fab73481
 
 COCOAPODS: 1.0.1

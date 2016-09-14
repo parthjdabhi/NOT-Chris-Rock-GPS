@@ -16,3 +16,6 @@ let url_register  = BaseURL + "register.php"
 let url_setProfilePic  = BaseURL + "profile.php"
 let url_setProfile  = BaseURL + ""
 let url_soundFiles = BaseURL + "sounds.php"
+
+let googlePlacesAPIKey = "AIzaSyCQ9yhrhgV3OEJPzFb_87XfJzl0O3_OXRM"
+let googleMapsApiKey = "AIzaSyB5jzZt5pc9-WVIEvfaBIZAIvQOYLhVu94"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qE8-ML-ztp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BnJ-o8-Obh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -215,6 +215,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg9-jx-8du" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="550.5" y="-543.5"/>
+        </scene>
+        <!--NOT Chris Rock GPS-->
+        <scene sceneID="UyF-vk-fXk">
+            <objects>
+                <viewController storyboardIdentifier="GooglePlacesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nXc-Kd-VcE" customClass="GooglePlacesViewController" customModule="NOT_Chris_Rock_GPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SGc-mU-MBI"/>
+                        <viewControllerLayoutGuide type="bottom" id="LbW-nl-I9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mef-As-8Pi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wld-PV-Mw0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wld-PV-Mw0" firstAttribute="top" secondItem="SGc-mU-MBI" secondAttribute="bottom" id="KUj-Jz-d2q"/>
+                            <constraint firstAttribute="trailing" secondItem="Wld-PV-Mw0" secondAttribute="trailing" id="Oxf-OI-nOC"/>
+                            <constraint firstItem="Wld-PV-Mw0" firstAttribute="leading" secondItem="mef-As-8Pi" secondAttribute="leading" id="hQ5-EJ-MOq"/>
+                            <constraint firstItem="LbW-nl-I9f" firstAttribute="top" secondItem="Wld-PV-Mw0" secondAttribute="bottom" id="qCy-OZ-Dpo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Wld-PV-Mw0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="qCy-OZ-Dpo"/>
+                                <exclude reference="KUj-Jz-d2q"/>
+                                <exclude reference="Oxf-OI-nOC"/>
+                                <exclude reference="hQ5-EJ-MOq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Wld-PV-Mw0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="qCy-OZ-Dpo"/>
+                                <include reference="KUj-Jz-d2q"/>
+                                <include reference="Oxf-OI-nOC"/>
+                                <include reference="hQ5-EJ-MOq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="NOT Chris Rock GPS" id="FT7-Z7-UTa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="LUE-Hz-I4h">
+                            <connections>
+                                <action selector="searchWithAddress:" destination="nXc-Kd-VcE" id="VD9-Dn-3IN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="googleMapsContainer" destination="Wld-PV-Mw0" id="rnj-n0-nPx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgY-da-FOP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="182.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a7W-Qt-yv0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BnJ-o8-Obh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TQ9-dr-OgR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nXc-Kd-VcE" kind="relationship" relationship="rootViewController" id="wtE-SK-ucw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3V4-hc-yEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="182.25"/>
         </scene>
     </scenes>
 </document>
