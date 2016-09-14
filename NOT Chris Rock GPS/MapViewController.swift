@@ -48,7 +48,6 @@ class MapViewController: UIViewController {
             }
         }
     }
-
 }
 
 //1
@@ -77,7 +76,6 @@ extension MapViewController: CLLocationManagerDelegate {
             // 8
             locationManager.stopUpdatingLocation()
         }
-        
     }
 }
 

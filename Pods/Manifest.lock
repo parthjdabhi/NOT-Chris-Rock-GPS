@@ -20,11 +20,19 @@ PODS:
   - GoogleMaps/Base (2.0.1)
   - GoogleMaps/Maps (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
+  - GTMOAuth2 (1.1.2):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.6):
+    - GTMSessionFetcher/Full (= 1.1.6)
+  - GTMSessionFetcher/Core (1.1.6)
+  - GTMSessionFetcher/Full (1.1.6):
+    - GTMSessionFetcher/Core (= 1.1.6)
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManagerSwift (4.0.5)
   - Mixpanel (3.0.3):
     - Mixpanel/Mixpanel (= 3.0.3)
   - Mixpanel/Mixpanel (3.0.3)
+  - OAuthSwift (0.5.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -40,9 +48,11 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - GoogleMaps
+  - GTMOAuth2 (~> 1.1.0)
   - IQDropDownTextField (~> 1.0)
   - IQKeyboardManagerSwift
   - Mixpanel
+  - OAuthSwift (~> 0.5.0)
   - SDWebImage (~> 3.8)
   - SVProgressHUD (~> 1.1)
   - SwiftyJSON (~> 2.3)
@@ -57,14 +67,17 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
   GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  GTMOAuth2: 1707e2f7fe3a6d7240223c23c473ba5a2d104474
+  GTMSessionFetcher: 6aacd0ab48ddf0c3633ab2642d792abfcad1b08a
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   Mixpanel: 45867daeaa3c60f88072a3cb1b44e0b6c5cec009
+  OAuthSwift: 1ef042d4362e755e24a78f158d817245641a5d24
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   WebBrowser: d187e245fc8d54a6a754a896039066d95ecebdb5
 
-PODFILE CHECKSUM: 2a0b33a0c514809315f35020ccd448c3b24e5ba9
+PODFILE CHECKSUM: 62636256862364d4b29f2fc9be7e9b5adaf774fb
 
 COCOAPODS: 1.0.1

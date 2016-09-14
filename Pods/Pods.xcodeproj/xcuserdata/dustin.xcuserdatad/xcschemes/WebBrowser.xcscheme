@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E312CDF62A5FEBEAADA2A7CC052F0823'
+               BlueprintIdentifier = 'D13098F4D65F3AF5D1F713346EC7EBF5'
                BlueprintName = 'WebBrowser'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'WebBrowser.framework'>

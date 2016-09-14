@@ -22,7 +22,8 @@ pod 'SVProgressHUD', '~> 1.1'
 pod 'Agrume', '~> 2.7'
 
 pod 'WebBrowser', '~> 0.0'
-
+pod 'GTMOAuth2', '~> 1.1.0'
+pod 'OAuthSwift', '~> 0.5.0'
 pod 'GoogleMaps'
 
 end

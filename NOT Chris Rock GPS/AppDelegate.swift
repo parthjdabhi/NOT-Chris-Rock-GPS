@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         GMSServices.provideAPIKey(googleMapsApiKey)
         return true
+    }
+    
+    func applicationHandleOpenURL(url: NSURL) {
+        
+        if (url.host == "oauth-callback") {
+            OAuthSwift.handleOpenURL(url)
+        } else {
+            // Google provider is the only one wuth your.bundle.id url schema.
+            OAuthSwift.handleOpenURL(url)
+        }
+        //oauth-swift://oauth-callback/linkedin?oauth_token=81--a81a5306-2ba3-47f0-acac-19c0fc719145&oauth_verifier=48299
     }
 
     func applicationWillResignActive(application: UIApplication) {
