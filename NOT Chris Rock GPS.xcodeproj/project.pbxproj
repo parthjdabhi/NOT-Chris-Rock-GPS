@@ -21,6 +21,7 @@
 		DA6AE7FA1D88C850001E5B65 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7F91D88C850001E5B65 /* MBProgressHUD.m */; };
 		DA6AE8001D88C907001E5B65 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7FE1D88C907001E5B65 /* AppState.swift */; };
 		DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7FF1D88C907001E5B65 /* AEXML.swift */; };
+		DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8021D88D035001E5B65 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		DA6AE7FB1D88C867001E5B65 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "NOT Chris Rock GPS/Bridging-Header.h"; sourceTree = "<group>"; };
 		DA6AE7FE1D88C907001E5B65 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DA6AE7FF1D88C907001E5B65 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		DA6AE8021D88D035001E5B65 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				DA6AE7C11D88C782001E5B65 /* AppDelegate.swift */,
 				DA6AE7C31D88C782001E5B65 /* ViewController.swift */,
+				DA6AE8021D88D035001E5B65 /* MapViewController.swift */,
 				DA6AE7F21D88C7A8001E5B65 /* Helper Files */,
 				DA6AE7FD1D88C8D6001E5B65 /* Storyboard & Plist */,
 			);
@@ -381,6 +384,7 @@
 				DA6AE7FA1D88C850001E5B65 /* MBProgressHUD.m in Sources */,
 				DA6AE8001D88C907001E5B65 /* AppState.swift in Sources */,
 				DA6AE7F61D88C805001E5B65 /* CommonUtils.swift in Sources */,
+				DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */,
 				DA6AE7CA1D88C782001E5B65 /* NOT_Chris_Rock_GPS.xcdatamodeld in Sources */,
 				DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */,
 				DA6AE7C21D88C782001E5B65 /* AppDelegate.swift in Sources */,
@@ -536,6 +540,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dustin/Desktop/NOT Chris Rock GPS/NOT Chris Rock GPS/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -550,6 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harloch.NOT-Chris-Rock-GPS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/dustin/Desktop/NOT Chris Rock GPS/NOT Chris Rock GPS/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

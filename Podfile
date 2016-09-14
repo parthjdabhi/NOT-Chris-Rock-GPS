@@ -23,4 +23,6 @@ pod 'Agrume', '~> 2.7'
 
 pod 'WebBrowser', '~> 0.0'
 
+pod 'GoogleMaps'
+
 end

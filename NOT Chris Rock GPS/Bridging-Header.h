@@ -12,3 +12,4 @@
 
 #endif /* Bridging_Header_h */
 #import "MBProgressHUD.h"
+#import <GoogleMaps/GoogleMaps.h>

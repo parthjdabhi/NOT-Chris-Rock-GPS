@@ -15,6 +15,11 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.15.1):
     - FBSDKCoreKit
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
   - IQDropDownTextField (1.1.0)
   - IQKeyboardManagerSwift (4.0.5)
   - Mixpanel (3.0.3):
@@ -34,6 +39,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - GoogleMaps
   - IQDropDownTextField (~> 1.0)
   - IQKeyboardManagerSwift
   - Mixpanel
@@ -50,6 +56,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
   IQDropDownTextField: 614f79ca905529c992045eaa112d0fc9ebb875d1
   IQKeyboardManagerSwift: 41fd3a45a2cdb2a0e031af697708a95b865068a1
   Mixpanel: 45867daeaa3c60f88072a3cb1b44e0b6c5cec009
@@ -58,6 +65,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   WebBrowser: d187e245fc8d54a6a754a896039066d95ecebdb5
 
-PODFILE CHECKSUM: a4a68d910869305adbbbcca1589c477c47a75b10
+PODFILE CHECKSUM: 2a0b33a0c514809315f35020ccd448c3b24e5ba9
 
 COCOAPODS: 1.0.1
