@@ -49,15 +49,13 @@ class WeatherGetter {
             }
             else {
                 do {
-                    // Try to convert that data into a Swift dictionary
+
                     let weatherData = try NSJSONSerialization.JSONObjectWithData(
                         data!,
                         options: .MutableContainers) as! [String: AnyObject]
                     
                     let weather = Weather(weatherData: weatherData)
-                    
-                    // Now that we have the Weather struct, let's notify the view controller,
-                    // which will use it to display the weather to the user.
+
                     self.delegate.didGetWeather(weather)
                 }
                 catch let jsonError as NSError {
@@ -68,5 +66,4 @@ class WeatherGetter {
         }
         dataTask.resume()
     }
-    
 }

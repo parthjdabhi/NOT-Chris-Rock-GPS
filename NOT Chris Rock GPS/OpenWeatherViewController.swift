@@ -103,9 +103,6 @@ class OpenWeatherViewController: UIViewController,
         print("didNotGetWeather error: \(error)")
     }
     
-    
-    // MARK: - CLLocationManagerDelegate and related methods
-    
     func getLocation() {
         guard CLLocationManager.locationServicesEnabled() else {
             showSimpleAlert(
