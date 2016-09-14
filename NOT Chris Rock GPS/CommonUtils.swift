@@ -40,7 +40,6 @@ class CommonUtils: NSObject {
     }
 }
 
-
 extension CLPlacemark {
     func LocationString() -> String? {
         
@@ -68,7 +67,6 @@ extension CLPlacemark {
     }
     
 }
-
 
 @IBDesignable
 class MyCustomButton: UIButton {
