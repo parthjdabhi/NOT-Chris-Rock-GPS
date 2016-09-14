@@ -22,6 +22,7 @@
 		DA6AE8001D88C907001E5B65 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7FE1D88C907001E5B65 /* AppState.swift */; };
 		DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7FF1D88C907001E5B65 /* AEXML.swift */; };
 		DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8021D88D035001E5B65 /* MapViewController.swift */; };
+		DA6AE8061D88E1AA001E5B65 /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DA6AE7FE1D88C907001E5B65 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DA6AE7FF1D88C907001E5B65 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 		DA6AE8021D88D035001E5B65 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				DA6AE7C11D88C782001E5B65 /* AppDelegate.swift */,
 				DA6AE7C31D88C782001E5B65 /* ViewController.swift */,
 				DA6AE8021D88D035001E5B65 /* MapViewController.swift */,
+				DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */,
 				DA6AE7F21D88C7A8001E5B65 /* Helper Files */,
 				DA6AE7FD1D88C8D6001E5B65 /* Storyboard & Plist */,
 			);
@@ -389,6 +392,7 @@
 				DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */,
 				DA6AE7C21D88C782001E5B65 /* AppDelegate.swift in Sources */,
 				DA6AE7F41D88C7B6001E5B65 /* Constants.swift in Sources */,
+				DA6AE8061D88E1AA001E5B65 /* YelpAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
