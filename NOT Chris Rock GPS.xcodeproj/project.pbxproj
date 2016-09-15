@@ -28,6 +28,7 @@
 		DA6AE80D1D89B169001E5B65 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE80C1D89B169001E5B65 /* Weather.swift */; };
 		DA6AE80F1D89E403001E5B65 /* GooglePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE80E1D89E403001E5B65 /* GooglePlacesViewController.swift */; };
 		DA6AE8111D89E442001E5B65 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8101D89E442001E5B65 /* SearchResultsController.swift */; };
+		DA6AE8141D8A24AE001E5B65 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE8131D8A24AE001E5B65 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		DA6AE80C1D89B169001E5B65 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		DA6AE80E1D89E403001E5B65 /* GooglePlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesViewController.swift; sourceTree = "<group>"; };
 		DA6AE8101D89E442001E5B65 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		DA6AE8131D8A24AE001E5B65 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6AE7C11D88C782001E5B65 /* AppDelegate.swift */,
+				DA6AE8131D8A24AE001E5B65 /* MainViewController.swift */,
 				DA6AE7C31D88C782001E5B65 /* ViewController.swift */,
 				DA6AE8051D88E1AA001E5B65 /* YelpAPIClient.swift */,
 				DA6AE8121D89E446001E5B65 /* GooglePlaces & Maps */,
@@ -421,6 +424,7 @@
 				DA6AE7F61D88C805001E5B65 /* CommonUtils.swift in Sources */,
 				DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */,
 				DA6AE80F1D89E403001E5B65 /* GooglePlacesViewController.swift in Sources */,
+				DA6AE8141D8A24AE001E5B65 /* MainViewController.swift in Sources */,
 				DA6AE8081D89124C001E5B65 /* OpenWeatherViewController.swift in Sources */,
 				DA6AE7CA1D88C782001E5B65 /* NOT_Chris_Rock_GPS.xcdatamodeld in Sources */,
 				DA6AE80D1D89B169001E5B65 /* Weather.swift in Sources */,

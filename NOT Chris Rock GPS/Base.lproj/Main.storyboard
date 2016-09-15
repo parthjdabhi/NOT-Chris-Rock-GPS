@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BnJ-o8-Obh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Npt-Ff-8Ss">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NOT_Chris_Rock_GPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="NOT_Chris_Rock_GPS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,10 +25,19 @@
                                     <action selector="searchForBurgerPlaces" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaD-xe-Le8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Burger Info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfo-v9-ph3">
+                                <rect key="frame" x="20" y="292" width="318" height="259"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="burgerLabel" destination="hfo-v9-ph3" id="OPK-4V-hNA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,14 +46,14 @@
         <!--Navigation Controller-->
         <scene sceneID="RZb-TQ-ITG">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Npt-Ff-8Ss" sceneMemberID="viewController">
+                <navigationController id="Npt-Ff-8Ss" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tjh-lw-QIe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="N4S-yI-Q8h" kind="relationship" relationship="rootViewController" id="Dai-QN-AIg"/>
+                        <segue destination="7Jx-kG-j6d" kind="relationship" relationship="rootViewController" id="CT5-D5-PLX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A2-yO-JLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +85,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SXg-Xc-GsO" secondAttribute="trailing" constant="-20" id="tw4-Xp-Az3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fSJ-l7-uSB"/>
+                    <navigationItem key="navigationItem" id="fSJ-l7-uSB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="UeC-t2-8bQ"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="SXg-Xc-GsO" id="3Rg-CL-pjB"/>
@@ -84,7 +95,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXr-76-JSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.5" y="271.5"/>
+            <point key="canvasLocation" x="-484.5" y="-543.5"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="zdk-e8-9bk">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Jx-kG-j6d" customClass="MainViewController" customModule="NOT_Chris_Rock_GPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htb-gT-ZWl"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxu-Zg-41D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xeh-2z-3dI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa5-KF-I3J">
+                                <rect key="frame" x="142" y="102" width="91" height="30"/>
+                                <state key="normal" title="Google Maps"/>
+                                <connections>
+                                    <action selector="googleMapsButton:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="otz-y0-kRr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-BV-M4d">
+                                <rect key="frame" x="138" y="152" width="98" height="30"/>
+                                <state key="normal" title="Google Places"/>
+                                <connections>
+                                    <action selector="googlePlaces:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="SNS-D6-6cv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qR9-FI-Mmn">
+                                <rect key="frame" x="172" y="191" width="30" height="30"/>
+                                <state key="normal" title="Yelp"/>
+                                <connections>
+                                    <action selector="yelp:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="ypG-Ov-wr5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4p-Q8-XZz">
+                                <rect key="frame" x="158" y="239" width="58" height="30"/>
+                                <state key="normal" title="Weather"/>
+                                <connections>
+                                    <action selector="weatherButton:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="TQ1-eR-3Ye"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uW2-4A-C3b"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="googleMaps" destination="Oa5-KF-I3J" id="WEh-dh-v8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CM6-uq-Cfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122.5" y="271.5"/>
         </scene>
         <!--Open Weather View Controller-->
         <scene sceneID="I95-uU-lwy">
@@ -276,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgY-da-FOP" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="182.25"/>
+            <point key="canvasLocation" x="1720.5" y="271.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7W-Qt-yv0">
@@ -295,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V4-hc-yEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="182.25"/>
+            <point key="canvasLocation" x="1164.5" y="271.5"/>
         </scene>
     </scenes>
 </document>

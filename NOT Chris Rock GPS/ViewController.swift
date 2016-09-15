@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     let client = YelpAPIClient()
 
+    @IBOutlet var burgerLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,6 +28,11 @@ class ViewController: UIViewController {
     @IBAction func searchForBurgerPlaces() {
         client.searchPlacesWithParameters(["ll": "37.788022,-122.399797", "category_filter": "burgers", "radius_filter": "3000", "sort": "0"], successSearch: { (data, response) -> Void in
             print(NSString(data: data, encoding: NSUTF8StringEncoding))
+            self.burgerLabel.text = String(self.client.searchPlacesWithParameters(["ll": "37.788022,-122.399797", "category_filter": "burgers", "radius_filter": "3000", "sort": "0"], successSearch: { (data, response) -> Void in
+            }) { (error) -> Void in
+                print(error)
+            })
+
         }) { (error) -> Void in
             print(error)
         }
