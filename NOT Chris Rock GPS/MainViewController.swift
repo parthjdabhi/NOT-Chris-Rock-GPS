@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, AudioRecorderViewControllerDelegate {
     
     
     @IBOutlet var googleMaps: UIButton!
@@ -40,5 +40,17 @@ class MainViewController: UIViewController {
     @IBAction func weatherButton(sender: AnyObject) {
         let next = self.storyboard?.instantiateViewControllerWithIdentifier("OpenWeatherViewController") as! OpenWeatherViewController!
         self.navigationController?.pushViewController(next, animated: true)
+    }
+    
+    @IBAction func recordAudio(sender: AnyObject) {
+    
+        let controller = AudioRecorderViewController()
+        controller.audioRecorderDelegate = self
+        presentViewController(controller, animated: true, completion: nil)
+    }
+    
+    func audioRecorderViewControllerDismissed(withFileURL fileURL: NSURL?) {
+        // do something with fileURL
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

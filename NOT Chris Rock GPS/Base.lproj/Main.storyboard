@@ -137,6 +137,13 @@
                                     <action selector="weatherButton:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="TQ1-eR-3Ye"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H02-gW-eFC">
+                                <rect key="frame" x="141" y="293" width="92" height="30"/>
+                                <state key="normal" title="Record Audio"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="7Jx-kG-j6d" eventType="touchUpInside" id="ItZ-Rd-i6t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -341,6 +348,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgY-da-FOP" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1720.5" y="271.5"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="ZP0-mN-uf0">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DUJ-tY-IzM" customClass="RecordViewController" customModule="NOT_Chris_Rock_GPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uvy-0j-Bfl"/>
+                        <viewControllerLayoutGuide type="bottom" id="s52-Km-h2V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zef-zF-o9D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-6m-Kep">
+                                <rect key="frame" x="172" y="194" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="DUJ-tY-IzM" eventType="touchUpInside" id="QGm-ac-ob4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-5K-08Z">
+                                <rect key="frame" x="171" y="260" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="DUJ-tY-IzM" eventType="touchUpInside" id="uhb-u3-OD4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uc-Qv-q8u">
+                                <rect key="frame" x="163" y="326" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="DUJ-tY-IzM" eventType="touchUpInside" id="2EG-bc-Bbt"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zHT-RA-Kee">
+                                <rect key="frame" x="128" y="427" width="118" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playButton" destination="iZ9-6m-Kep" id="k6b-9x-YwE"/>
+                        <outlet property="recordButton" destination="9Uc-Qv-q8u" id="VpM-I8-vJW"/>
+                        <outlet property="stopButton" destination="U7p-5K-08Z" id="JtO-1B-zgQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMr-XU-Wk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164.5" y="-543.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7W-Qt-yv0">
