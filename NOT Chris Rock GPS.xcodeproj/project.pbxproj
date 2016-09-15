@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A52D1CA082BFB1D95A2BFEAF /* Pods_NOT_Chris_Rock_GPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42050BA16180614E68FFE74 /* Pods_NOT_Chris_Rock_GPS.framework */; };
-		DA334BEA1D8A4CB8002E4E1F /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA334BE91D8A4CB8002E4E1F /* RecordViewController.swift */; };
 		DA334BEE1D8A7CE0002E4E1F /* StopButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA334BEC1D8A7CE0002E4E1F /* StopButton@2x.png */; };
 		DA334BEF1D8A7CE0002E4E1F /* PlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA334BED1D8A7CE0002E4E1F /* PlayButton@2x.png */; };
-		DA334BF21D8A7CF8002E4E1F /* AudioRecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA334BF11D8A7CF8002E4E1F /* AudioRecorderViewController.xib */; };
-		DA334BF41D8A7D03002E4E1F /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA334BF31D8A7D03002E4E1F /* AudioRecorderViewController.swift */; };
+		DA334BF61D8A81AE002E4E1F /* MultipleTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA334BF51D8A81AE002E4E1F /* MultipleTapViewController.swift */; };
 		DA6AE7C21D88C782001E5B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7C11D88C782001E5B65 /* AppDelegate.swift */; };
 		DA6AE7C41D88C782001E5B65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AE7C31D88C782001E5B65 /* ViewController.swift */; };
 		DA6AE7C71D88C782001E5B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6AE7C51D88C782001E5B65 /* Main.storyboard */; };
@@ -57,11 +55,9 @@
 		641E7EB4FC3A22ED1FC64B5A /* Pods-NOT Chris Rock GPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NOT Chris Rock GPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NOT Chris Rock GPS/Pods-NOT Chris Rock GPS.release.xcconfig"; sourceTree = "<group>"; };
 		A3F369191E0C0EA3CDC0AD6E /* Pods-NOT Chris Rock GPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NOT Chris Rock GPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NOT Chris Rock GPS/Pods-NOT Chris Rock GPS.debug.xcconfig"; sourceTree = "<group>"; };
 		D42050BA16180614E68FFE74 /* Pods_NOT_Chris_Rock_GPS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NOT_Chris_Rock_GPS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA334BE91D8A4CB8002E4E1F /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		DA334BEC1D8A7CE0002E4E1F /* StopButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StopButton@2x.png"; sourceTree = "<group>"; };
 		DA334BED1D8A7CE0002E4E1F /* PlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButton@2x.png"; sourceTree = "<group>"; };
-		DA334BF11D8A7CF8002E4E1F /* AudioRecorderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioRecorderViewController.xib; sourceTree = "<group>"; };
-		DA334BF31D8A7D03002E4E1F /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
+		DA334BF51D8A81AE002E4E1F /* MultipleTapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTapViewController.swift; sourceTree = "<group>"; };
 		DA6AE7BE1D88C782001E5B65 /* NOT Chris Rock GPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NOT Chris Rock GPS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6AE7C11D88C782001E5B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA6AE7C31D88C782001E5B65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +126,7 @@
 		DA334BEB1D8A7CC3002E4E1F /* Audio & Recording */ = {
 			isa = PBXGroup;
 			children = (
-				DA334BF31D8A7D03002E4E1F /* AudioRecorderViewController.swift */,
-				DA334BF11D8A7CF8002E4E1F /* AudioRecorderViewController.xib */,
-				DA334BE91D8A4CB8002E4E1F /* RecordViewController.swift */,
+				DA334BF51D8A81AE002E4E1F /* MultipleTapViewController.swift */,
 			);
 			name = "Audio & Recording";
 			sourceTree = "<group>";
@@ -374,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA334BEF1D8A7CE0002E4E1F /* PlayButton@2x.png in Resources */,
-				DA334BF21D8A7CF8002E4E1F /* AudioRecorderViewController.xib in Resources */,
 				DA334BEE1D8A7CE0002E4E1F /* StopButton@2x.png in Resources */,
 				DA6AE7CF1D88C782001E5B65 /* LaunchScreen.storyboard in Resources */,
 				DA6AE7CC1D88C782001E5B65 /* Assets.xcassets in Resources */,
@@ -456,15 +449,14 @@
 				DA6AE7FA1D88C850001E5B65 /* MBProgressHUD.m in Sources */,
 				DA6AE8001D88C907001E5B65 /* AppState.swift in Sources */,
 				DA6AE7F61D88C805001E5B65 /* CommonUtils.swift in Sources */,
+				DA334BF61D8A81AE002E4E1F /* MultipleTapViewController.swift in Sources */,
 				DA6AE8031D88D035001E5B65 /* MapViewController.swift in Sources */,
 				DA6AE80F1D89E403001E5B65 /* GooglePlacesViewController.swift in Sources */,
 				DA6AE8141D8A24AE001E5B65 /* MainViewController.swift in Sources */,
 				DA6AE8081D89124C001E5B65 /* OpenWeatherViewController.swift in Sources */,
-				DA334BEA1D8A4CB8002E4E1F /* RecordViewController.swift in Sources */,
 				DA6AE7CA1D88C782001E5B65 /* NOT_Chris_Rock_GPS.xcdatamodeld in Sources */,
 				DA6AE80D1D89B169001E5B65 /* Weather.swift in Sources */,
 				DA6AE8011D88C907001E5B65 /* AEXML.swift in Sources */,
-				DA334BF41D8A7D03002E4E1F /* AudioRecorderViewController.swift in Sources */,
 				DA6AE7C21D88C782001E5B65 /* AppDelegate.swift in Sources */,
 				DA6AE7F41D88C7B6001E5B65 /* Constants.swift in Sources */,
 				DA6AE8111D89E442001E5B65 /* SearchResultsController.swift in Sources */,
